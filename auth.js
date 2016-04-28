@@ -72,7 +72,7 @@ module.exports=function AuthTwitt(url,path,method,oauth_param,dop_param,callback
 			
 		}
 	  var options = {
-	  key: fs.readFileSync('./key.pem'),
+	  key: fs.readFileSync(__dirname+'/key.pem'),
 	  hostname: urlParse.parse(url).hostname,
 	  path: path,
 	  method: method,
