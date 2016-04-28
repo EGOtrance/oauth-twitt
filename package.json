@@ -1,0 +1,28 @@
+{
+  "name": "oauth-twitt",
+  "version": "1.0.0",
+  "description": "var oauthSignature=require('oauth-signature');\r var querystring=require('querystring');\r var fs=require('fs');\r var http=require('https');\r var date=new Date;\r var request=require('request');\r var httpServ=require('http');\r var urlParse=require('url');\r NONCE_CHARS= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n',\r               'o','p','q','r','s','t','u','v','w','x','y','z','A','B',\r               'C','D','E','F','G','H','I','J','K','L','M','N','O','P',\r               'Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3',\r               '4','5','6','7','8','9'];",
+  "main": "auth.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SiziySenis",
+  "license": "ISC",
+  "dependencies": {
+    "oauth-signature": "^1.3.1",
+    "querystring": "^0.2.0",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EGOtrance/oauth-twitt.git"
+  },
+  "keywords": [
+    "oauth-twitt"
+  ],
+  "bugs": {
+    "url": "https://github.com/EGOtrance/oauth-twitt/issues"
+  },
+  "homepage": "https://github.com/EGOtrance/oauth-twitt#readme"
+}

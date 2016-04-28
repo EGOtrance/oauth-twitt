@@ -1,0 +1,37 @@
+oauth-twitt module
+
+Модуль для работы с twitter.
+AuthTwitt(url,path,method,{oauth_param},{param_query},callback(data))
+url - адрес сервера (пример:https//api.twitter.com)
+path - путь на запрашиваемом сервере (пример: /1.1/search/tweets.json)
+method - метод запроса (пример: 'GET','POST' и т.д.)
+{oauth_param} - объект авторизации, который должен ОБЯЗАТЕЛЬНО!!! содержать в себе все следующие поля
+	consumer_key:'' - обязательное
+	consumer_secret:'' - обязательное
+	version: '1.0'  - обязательное
+	token:'' - при его отсутствии присваиваем пустую строку''
+	token_secret:'' - при его отсутствии присваиваем пустую строку''
+	callback:'oob' - при его отсутствии присваиваем пустую строку''
+{param_query} - объект запроса, который хранит в себе параметры запроса например: q='Hello'
+callback(data) - функция обратного вызова, в параметрах которой передается ответ на запрос на сервер.
+
+
+
+пример:
+var oauth_param=
+{
+	consumer_key:'Wx0ezY4Fp3FmuY7ZObfTXKFjA',
+	version:'1.0',
+	token:'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+	token_secret:'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+	consumer_secret:'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+	callback:'oob'
+};
+var param_query=
+{
+	q:'SiziyDenis'
+}
+AuthTwitt("https://api.twitter.com",'/1.1/search/tweets.json','GET',oauth_param,param_query,function(data){
+{
+	console.log(data);
+});
